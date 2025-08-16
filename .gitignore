@@ -1,0 +1,36 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+*.env
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Odoo specific
+*.log
+*.db
+*.bak
+*.orig
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / assets (agar mavjud bo‘lsa)
+node_modules/
+dist/
+build/
+
+# Local config files
+conf/odoo.conf
