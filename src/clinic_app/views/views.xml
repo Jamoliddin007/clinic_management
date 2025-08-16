@@ -1,0 +1,70 @@
+<odoo>
+    <!-- Asosiy Clinic menu -->
+     <menuitem id="menu_clinic_root" name="Clinic Management" sequence="10"/>
+
+    <!-- Sub Menular -->
+    <menuitem id="menu_clinic_doctor" name="Doctors" parent="menu_clinic_root" sequence="1"/>
+    <menuitem id="menu_clinic_patient" name="Patients" parent="menu_clinic_root" sequence="2"/>
+    <menuitem id="menu_clinic_appointment" name="Appointments" parent="menu_clinic_root" sequence="3"/>
+    <menuitem id="menu_clinic_treatment" name="Treatments" parent="menu_clinic_root" sequence="4"/>
+    <menuitem id="menu_clinic_diagnosis" name="Diagnosis" parent="menu_clinic_root" sequence="5"/>
+    <menuitem id="menu_clinic_medicine" name="Medicines" parent="menu_clinic_root" sequence="6"/>
+    <menuitem id="menu_clinic_prescription" name="Prescriptions" parent="menu_clinic_root" sequence="7"/>
+
+    <!-- Doctor action -->
+    <record id="action_doctor" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">clinic_app.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_doctor_action" parent="menu_clinic_doctor" action="action_doctor"/>
+
+    <!-- Patient action -->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">clinic_app.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_patient_action" parent="menu_clinic_patient" action="action_patient"/>
+
+    <!-- Appointment action -->
+    <record id="action_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">clinic_app.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_appointment_action" parent="menu_clinic_appointment" action="action_appointment"/>
+
+    <!-- Treatment action -->
+    <record id="action_treatment" model="ir.actions.act_window">
+        <field name="name">Treatments</field>
+        <field name="res_model">clinic_app.treatment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_treatment_action" parent="menu_clinic_treatment" action="action_treatment"/>
+
+    <!-- Diagnosis action -->
+    <record id="action_diagnosis" model="ir.actions.act_window">
+        <field name="name">Diagnosis</field>
+        <field name="res_model">clinic_app.diagnosis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_diagnosis_action" parent="menu_clinic_diagnosis" action="action_diagnosis"/>
+
+    <!-- Medicine action -->
+    <record id="action_medicine" model="ir.actions.act_window">
+        <field name="name">Medicines</field>
+        <field name="res_model">clinic_app.medicine</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_medicine_action" parent="menu_clinic_medicine" action="action_medicine"/>
+
+    <!-- Prescription action -->
+    <record id="action_prescription" model="ir.actions.act_window">
+        <field name="name">Prescriptions</field>
+        <field name="res_model">clinic_app.prescription</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_prescription_action" parent="menu_clinic_prescription" action="action_prescription"/>
+
+</odoo>

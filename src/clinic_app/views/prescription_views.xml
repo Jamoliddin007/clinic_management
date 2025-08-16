@@ -1,0 +1,50 @@
+<odoo>
+    <record id="view_prescription_list" model="ir.ui.view">
+        <field name="name">clinic.prescription.list</field>
+        <field name="model">clinic.prescription</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date"/>
+                <field name="appointment_id"/>
+                <field name="doctor_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_prescription_form" model="ir.ui.view">
+        <field name="name">clinic.prescription.form</field>
+        <field name="model">clinic.prescription</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="appointment_id"/>
+                        <field name="doctor_id" readonly="1"/>
+                        <field name="instructions"/>
+                    </group>
+                    <group string="Lines">
+                        <field name="line_ids">
+                            <tree editable="bottom">
+                                <field name="medicine_id"/>
+                                <field name="dosage"/>
+                                <field name="frequency"/>
+                                <field name="duration"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_prescription" model="ir.actions.act_window">
+        <field name="name">Prescriptions</field>
+        <field name="res_model">clinic.prescription</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_clinic_prescription" name="Prescriptions"
+              parent="clinic_management.menu_clinic_root" action="action_prescription"/>
+</odoo>
