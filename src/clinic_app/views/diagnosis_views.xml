@@ -35,5 +35,5 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_clinic_diagnosis" name="Diagnoses" parent="clinic_management.menu_clinic_root" action="action_diagnosis"/>
+    <menuitem id="menu_clinic_diagnosis" name="Diagnoses" parent="menu_clinic_root" action="action_diagnosis"/>
 </odoo>

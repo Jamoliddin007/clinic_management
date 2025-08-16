@@ -5,7 +5,7 @@ class ClinicPrescriptionLine(models.Model):
     _description = 'Prescription Line'
 
     prescription_id = fields.Many2one('clinic.prescription', string="Prescription", required=True, ondelete='cascade')
-    medicine_id = fields.Many2one('clinic.medicine', string="Medicine", required=True)
+    medicine_id = fields.Char(string="Medicine")
     dosage = fields.Char("Dosage")
     frequency = fields.Char("Frequency")
     duration = fields.Char("Duration")

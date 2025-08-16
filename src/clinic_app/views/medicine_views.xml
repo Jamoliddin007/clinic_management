@@ -39,5 +39,5 @@
     </record>
 
     <menuitem id="menu_clinic_medicine" name="Medicines"
-              parent="clinic_management.menu_clinic_root" action="action_medicine"/>
+              parent="menu_clinic_root" action="action_medicine"/>
 </odoo>

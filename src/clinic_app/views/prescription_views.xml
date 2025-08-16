@@ -25,13 +25,13 @@
                     </group>
                     <group string="Lines">
                         <field name="line_ids">
-                            <tree editable="bottom">
+                            <list editable="bottom">
                                 <field name="medicine_id"/>
                                 <field name="dosage"/>
                                 <field name="frequency"/>
                                 <field name="duration"/>
                                 <field name="note"/>
-                            </tree>
+                            </list>
                         </field>
                     </group>
                 </sheet>
@@ -46,5 +46,5 @@
     </record>
 
     <menuitem id="menu_clinic_prescription" name="Prescriptions"
-              parent="clinic_management.menu_clinic_root" action="action_prescription"/>
+              parent="menu_clinic_root" action="action_prescription"/>
 </odoo>
